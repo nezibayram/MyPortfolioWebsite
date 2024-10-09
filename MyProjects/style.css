@@ -1,0 +1,1366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+    background-color: black;
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+#stickycontainer {
+  min-height: auto;
+  display: grid;
+  grid-template-columns:100%;
+}
+
+/************************Navbar Start*************************/
+
+.container {
+  margin-top: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.navbar {
+  position: relative;
+}
+
+.dots-btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: #BFF44F;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 1rem 3rem rgba(13, 83, 57, 0.4);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.change .dot-1 {
+  height: 3rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  transform: rotate(-405deg) translate(1rem, 1rem);
+}
+
+.change .dot-2 {
+  opacity: 0;
+}
+.change .dot-3 {
+  height: 3rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  transform: rotate(405deg) translate(-1rem, 1rem);
+}
+
+.nav-menu {
+  width: 1vw;
+  height: 1.5rem;
+  background-color: #BFF44F;
+  padding: 1rem 13rem;
+  border-radius: 5rem;
+  box-shadow: 1rem 3rem 6rem rgba(27, 40, 35, 0.4);
+  transition: width 0.3s;
+}
+
+.change .nav-menu {
+  width: 25vw;
+  background-color: #BFF44F;
+}
+
+.nav-menu-link {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  font-weight: bold;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.nav-menu a{
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+  .change .nav-menu-link {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s 0.3s;
+}
+
+.nav-menu-link:nth-child(1) {
+  left: 1rem;
+}
+
+.nav-menu-link:nth-child(2) {
+  left: 0;
+}
+
+.nav-menu-link:nth-child(3) {
+  left: 5rem;
+}
+.nav-menu-link:nth-child(4) {
+  left: 0;
+}
+
+.nav-menu-link:nth-child(5) {
+  left: 10.5rem;
+}
+
+.nav-menu-link:nth-child(6) {
+  right: 0rem;
+}
+
+.nav-menu-link:nth-child(7) {
+  right: 7.5rem;
+}
+
+.nav-menu-link:nth-child(8) {
+  right: 0;
+}
+
+.nav-menu-link:nth-child(9) {
+  right:2rem;
+}
+
+.nav-menu-link:nth-child(10) {
+  right: 1rem;
+}
+
+
+.nav-menu-link  {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+
+.nav-menu-link::before,
+.nav-menu-link::after {
+    content:"";
+    width: 100%;
+    height: 2px; 
+    background-color: red;
+    position: absolute;
+    left: 0; 
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-menu-link::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.nav-menu-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-menu-link:hover::before,
+.nav-menu-link:hover::after {
+    transform: scaleX(1);
+}
+
+/************************Navbar End*************************/
+
+
+/************************Main Start**********************************************/
+
+
+.maincontainer{
+  display: grid;
+  grid-template-columns: 100%;
+  margin-top: 3rem;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.box {
+  width: 25rem;
+  margin-bottom: -12rem;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.box:hover{
+  margin-bottom: 6rem; 
+}
+
+.box-item {
+  background-color: #BFF44F;
+  display: flex;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+}
+
+.img-wrapper {
+  display: flex;
+  width: 7rem;
+  height: 7rem;
+  margin-right: 1rem;
+  margin-left: .5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.title {
+  padding-top: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.project {
+  width: 60%;
+  color: black;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+
+.project {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+
+.linkbox a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 15rem;
+  height: 3rem;
+  padding: 0.8rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+.description{
+  font-size: 0.3rem;
+  margin-top: -0.8rem;
+  margin-right: -0.8rem;
+  text-align: start;
+}
+
+.box-btn {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+
+.box-btn-info {
+  transition: all 0.5s 0.1s;
+}
+
+.box.info {
+  height: 3rem;
+}
+.box-details{
+  height: 6rem;
+}
+
+/*****************Box2 Start***************/
+.box-btn2 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn2 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn2 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn2 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn2 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box2 End*****************/
+
+/*****************Box3 Start***************/
+.box-btn3 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn3 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn3 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn3 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn3 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box3 End*****************/
+
+/*****************Box4 Start***************/
+.box-btn4 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn4 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn4 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn4 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn4 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+
+/*****************Box4 End*****************/
+
+/*****************Box5 Start***************/
+.box-btn5 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn5 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn5 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn5 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn5 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box5 End*****************/
+
+/*****************Box6 Start***************/
+.box-btn6 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn6 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn6 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn6 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn6 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box6 End*****************/
+
+/*****************Box7 Start*****************/
+.box-btn7 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn7 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn7 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn7 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn7 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box7 End*****************/
+
+/*****************Box8 Start*****************/
+.box-btn8 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn8 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn8 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn8 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn8 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box8 End*****************/
+
+/*****************Box9 Start*****************/
+.box-btn9 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn9 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn9 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn9 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn9 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box9 End*****************/
+
+/*****************Box10 Start*****************/
+.box-btn10 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn10 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn10 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn10 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn10 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box10 End*****************/
+
+/*****************Box11 Start*****************/
+.box-btn11 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn11 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn11 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn11 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn11 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box11 End*****************/
+
+/*****************Box12 Start*****************/
+.box-btn12 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 7.5rem;
+  width: 9rem;
+  height: 3rem;
+  background-color: #2b303a;
+  color: #BFF44F;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.change .box-btn12 {
+  width: 3rem;
+  right: 2rem;
+  bottom: -2rem;
+  border-radius: 50%;
+}
+.box-btn-info,
+.box-btn12 i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn12 i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn12 i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+/*****************Box12 End*****************/
+
+
+
+.box-btn-info,
+.box-btn i {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.change .box-btn-info {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+
+.box-btn i {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .box-btn i {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.box-info {
+  background-color: #87c404;
+  color: black;
+  font-weight: bold;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+.change .box-info {
+  transform: translateY(0);
+}
+
+.box-info h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.change .box-info h4 {
+  transform: scale(1);
+}
+
+.box-project {
+  background-color: #BFF44F;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.information {
+  transition: all 0.5s 0.3s;
+}
+
+.adress {
+  transition: all 0.5s 0.5s;
+}
+
+.change .box-project {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.box-details h4 {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.information h4 {
+  color: red;
+}
+
+.adress h4 {
+  color: red;
+}
+
+
+.box-details p {
+  font-size: 1.4rem;
+  color: black;
+  letter-spacing: 0.1rem;
+}
+
+
+
+
+/************************Main End***************************************************/
+
+
+/************************Footer Start*************************/
+footer {
+  margin-top: 4rem;
+  background-color:#BFF44F;
+  width: 100vw;
+}
+
+.footbar {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  line-height: 1rem;
+  bottom: 0;
+  text-decoration: none;
+}
+
+.footbar li img{
+  color: black;
+  height: 3rem;
+  width: 3rem;
+}
+
+
+.footbar li a{
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+#fimage{
+  height: 3.5rem;
+  width: auto;
+  }
+/************************Footer End*************************/
+
+/**************************@MEDIA Start*******************************/
+
+/*Breakpoint 1: 550px ***************/
+@media screen and (min-width: 500px){
+
+  .change .nav-menu {
+    width: 28vw;
+  }
+
+  .nav-menu a{
+    font-size: 1.2rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 12rem;
+  }
+  
+  .nav-menu-link:nth-child(7) {
+    right: 9rem;
+  }
+  
+  }
+
+/*Breakpoint 2: 550px ***************/
+@media screen and (min-width: 550px){
+
+  .change .nav-menu {
+    width: 30vw;
+  }
+
+  .nav-menu a{
+    font-size: 1.3rem;
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 1.5rem;
+  }
+
+  .nav-menu-link:nth-child(3) {
+    left: 6rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 13rem;
+  }
+  
+  .nav-menu-link:nth-child(7) {
+    right: 10rem;
+  }
+ 
+  .nav-menu-link:nth-child(9) {
+    right:2.5rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+}
+
+/*Breakpoint 3: 650px ***************/
+
+@media screen and (min-width: 650px){
+
+
+main{
+  margin-top: 6rem;
+}
+  .maincontainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+  }
+
+  .role .box {
+  margin-bottom: 0;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  }
+
+
+
+
+  .nav-menu {
+    width: 5vw;
+    height: 1.5rem;
+  }
+
+  .change .nav-menu {
+    width: 50vw;
+  }
+
+  .nav-menu a{
+    font-size: 1.5rem;
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 3rem;
+  }
+  
+  .nav-menu-link:nth-child(2) {
+    left: 0;
+  }
+  
+  .nav-menu-link:nth-child(3) {
+    left: 11rem;
+  }
+  .nav-menu-link:nth-child(4) {
+    left: 0;
+  }
+  
+  .nav-menu-link:nth-child(5) {
+    left: 20rem;
+  }
+  
+  .nav-menu-link:nth-child(6) {
+    right: 0rem;
+  }
+  
+  .nav-menu-link:nth-child(7) {
+    right: 14rem;
+  }
+  
+  .nav-menu-link:nth-child(8) {
+    right: 0;
+  }
+  
+  .nav-menu-link:nth-child(9) {
+    right: 3rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+}
+/*Breakpoint 4: 750px ***************/
+
+
+@media screen and (min-width: 750px){
+
+  
+  .nav-menu {
+    width: 10vw;
+    height: 1.5rem;
+  }
+
+  .nav-menu a{
+    font-size: 1.6rem;
+  }
+  
+  .change .nav-menu {
+    width: 60vw;
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 2.5rem;
+  }
+ 
+  .nav-menu-link:nth-child(3) {
+    left: 12rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 23rem;
+  }
+
+  .nav-menu-link:nth-child(7) {
+    right: 20rem;
+  }
+
+  .nav-menu-link:nth-child(9) {
+    right: 8rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+}
+
+
+/*Breakpoint 5: 850px ***************/
+
+@media screen and (min-width: 850px){
+
+  
+  .nav-menu {
+    width: 10vw;
+    height: 1.5rem;
+  }
+
+  .nav-menu a{
+    font-size: 1.7rem;
+  }
+  
+  .change .nav-menu {
+    width: 65vw;
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 3rem;
+  }
+ 
+  .nav-menu-link:nth-child(3) {
+    left: 15rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 28rem;
+  }
+
+  .nav-menu-link:nth-child(7) {
+    right: 24rem;
+  }
+
+  .nav-menu-link:nth-child(9) {
+    right: 8rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+
+}
+
+/*Breakpoint 6: 950px ***************/
+
+@media screen and (min-width: 950px){
+
+  
+
+main{
+  margin-top: 6rem;
+}
+  .maincontainer{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .role .box {
+  margin-bottom: 0;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  }
+
+
+
+
+  .nav-menu a{
+    font-size: 1.8rem;
+  }
+  .nav-menu {
+    width: 10vw;
+    height: 2rem;
+  }
+  
+  .change .nav-menu {
+    width: 70vw;
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 4rem;
+  }
+ 
+  .nav-menu-link:nth-child(3) {
+    left: 18rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 34rem;
+  }
+
+  .nav-menu-link:nth-child(7) {
+    right: 28rem;
+  }
+
+  .nav-menu-link:nth-child(9) {
+    right: 10rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+}
+
+/*Breakpoint 7: 1200px ***************/
+
+@media screen and (min-width: 1200px){
+
+body{
+  height: 120vh;
+}
+
+  .nav-menu a{
+    font-size: 2rem;
+  }
+
+  .viewport {
+    margin-top: 2%;
+   }
+
+footer {
+  margin-top: 12%;
+  bottom: 0;
+}
+
+  .nav-menu {
+    width: 10vw;
+    height: 4rem;
+    
+  }
+
+  .nav-menu-link a {
+ font-size: 4rem;
+  }
+  
+  .change .nav-menu {
+    width: 75vw;
+  }
+
+  .dots-btn {
+    width: 10rem;
+    height: 10rem;
+    box-shadow: none;
+  }
+  
+  .dot {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .change .dot-1 {
+    height: 7rem;
+    width: 0.8rem;
+    border-radius: 1rem;
+    transform: rotate(-405deg) translate(2rem, 2rem);
+  }
+  
+  .change .dot-2 {
+    opacity: 0;
+  }
+  .change .dot-3 {
+    height: 7rem;
+    width: 0.8rem;
+    border-radius: 1rem;
+    transform: rotate(405deg) translate(-2rem, 2rem);
+  }
+
+  .nav-menu-link:nth-child(1) {
+    left: 4rem;
+  }
+ 
+  .nav-menu-link:nth-child(3) {
+    left: 20rem;
+  }
+
+  .nav-menu-link:nth-child(5) {
+    left: 38rem;
+  }
+
+  .nav-menu-link:nth-child(7) {
+    right: 35rem;
+  }
+
+  .nav-menu-link:nth-child(9) {
+    right: 15rem;
+  }
+  
+  .nav-menu-link:nth-child(10) {
+    right: 2rem;
+  }
+
+  .footbar {
+    height: 60px;
+    line-height: 10px;
+  }
+  
+  .footbar li img{
+    height: 4rem;
+    width: 4rem;
+  } 
+
+  #fimage{
+    height: 4.5rem;
+    width: auto;
+    }
+}
