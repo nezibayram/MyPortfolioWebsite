@@ -298,15 +298,15 @@ footer {
 
 /**************************@MEDIA Start*******************************/
 
-/*Breakpoint 1: 550px ***************/
-@media screen and (min-width: 500px){
+/*Breakpoint 1: 350px ***************/
+@media screen and (min-width: 350px){
 
   .change .nav-menu {
     width: 28vw;
   }
 
   .nav-menu a{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .nav-menu-link:nth-child(5) {
