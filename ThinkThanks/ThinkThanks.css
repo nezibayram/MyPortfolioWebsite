@@ -301,8 +301,8 @@ footer {
 /*Breakpoint 1: 350px ***************/
 @media screen and (min-width: 350px){
 
-  html {
-  font-size: 40%;
+  * {
+  font-size: 10px;
 }
 
   .change .nav-menu {
@@ -326,8 +326,8 @@ footer {
 /*Breakpoint 2: 550px ***************/
 @media screen and (min-width: 550px){
 
-  html {
-  font-size: 50%;
+  * {
+  font-size: 10px;
 }
 
   .change .nav-menu {
